@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>フリーハンドお絵かき</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+    <body>
+        <h1>お絵かきアプリ</h1>
+        <div>
+            <p>パレット</p>
+            <label for="black-button">黒</label><input type="radio" name="color" id="black-button" value="black" checked>
+            <label for="red-button">赤</label><input type="radio" name="color" id="red-button" value="red">
+            <label for="white-button">白</label><input type="radio" name="color" id="white-button" value="white">
+            <label for="white-button">白</label><input type="radio" name="color" id="white-button" value="white">
+            <button id="clear-button">全消し</button>
+        </div>
+        <canvas
+            id="draw-area"
+            width="800px"
+            height="600px"
+            style="border: 1px solid #000000;">
+        </canvas>
+        <div>
+            
+        </div>
+        <button id="ses">ローカルストレージに保存</button><br>
+        <button id="download">download</button><br>
+        <script src="free.js"></script>
+    </body>
+</html>

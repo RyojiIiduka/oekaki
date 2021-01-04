@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head></head>
+<body>
+
+
+描画領域<br>
+<canvas id="hoge" width="1000" height="1000"></canvas>
+
+
+<script>
+
+function init(){
+	// 画像の表示イベント
+	var img = new Image();
+	img.src = "sample.jpg";
+	img.onload = function(){
+		// 画像を表示
+		ctx.drawImage(img,0,0,500,500);
+		
+		// 線を描画
+		ctx.beginPath();
+		ctx.moveTo(0, 0);
+		ctx.lineTo(200, 200);
+		ctx.stroke();
+	}
+}
+
+// 実行をセット
+var ctx;
+document.body.onload = function(){
+
+	ctx = document.querySelector("#hoge").getContext("2d");
+
+	init();
+
+}
+
+</script>
+
+
+</body>
+</html>
